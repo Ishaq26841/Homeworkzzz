@@ -1,0 +1,86 @@
+print("===================================")
+print("   GROCERY COST COMPARISON TOOL")
+print("===================================")
+
+rice = 800
+oil = 450
+eggs = 300
+vegetables = 250
+
+total_cost = rice + oil + eggs + vegetables
+discount = 100
+
+final_cost = total_cost - discount
+
+print("\n--- Part 1: Grocery Bill ---")
+print("Rice:", rice, "Tk")
+print("Oil:", oil, "Tk")
+print("Eggs:", eggs, "Tk")
+print("Vegetables:", vegetables, "Tk")
+print("Total before discount:", total_cost, "Tk")
+print("Discount:", discount, "Tk")
+print("Final grocery cost:", final_cost, "Tk")
+
+
+
+print("\n--- Part 2: Divisibility Check ---")
+
+if final_cost % 2 == 0:
+    print("The grocery cost is divisible by 2.")
+else:
+    print("The grocery cost is not divisible by 2.")
+
+if final_cost % 5 == 0:
+    print("The grocery cost is divisible by 5.")
+else:
+    print("The grocery cost is not divisible by 5.")
+
+
+# Part 3: Correcting a mean
+print("\n--- Part 3: Correcting the Mean ---")
+
+# Average of 4 families' grocery costs was calculated incorrectly.
+wrong_average = 1200
+number_of_families = 4
+wrong_total = wrong_average * number_of_families
+
+# One bill was recorded as 1500 instead of 1100.
+wrong_bill = 1500
+correct_bill = 1100
+
+correct_total = wrong_total - wrong_bill + correct_bill
+correct_average = correct_total / number_of_families
+
+print("Incorrect average:", wrong_average, "Tk")
+print("Incorrect bill:", wrong_bill, "Tk")
+print("Correct bill:", correct_bill, "Tk")
+print("Corrected average:", correct_average, "Tk")
+
+
+print("\n--- Part 4: Cost Comparison ---")
+
+family_1 = final_cost
+family_2 = 1600
+family_3 = 1900
+family_4 = 1400
+
+print("Our family's cost:", family_1, "Tk")
+print("Family 2 cost:", family_2, "Tk")
+print("Family 3 cost:", family_3, "Tk")
+print("Family 4 cost:", family_4, "Tk")
+
+if family_1 < family_2 and family_1 < family_3 and family_1 < family_4:
+    print("Our family spent the least.")
+elif family_1 > family_2 and family_1 > family_3 and family_1 > family_4:
+    print("Our family spent the most.")
+else:
+    print("Our family's cost is between the other families' costs.")
+
+
+# Final Summary
+print("\n===================================")
+print("          FINAL SUMMARY")
+print("===================================")
+print("Final grocery bill:", final_cost, "Tk")
+print("Corrected average:", correct_average, "Tk")
+print("Comparison completed successfully!")
